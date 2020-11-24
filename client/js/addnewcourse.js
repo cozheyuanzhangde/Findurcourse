@@ -1,6 +1,7 @@
 let courseschoolname = '';
 document.getElementById('courseschoolname').addEventListener('change',()=>{
   courseschoolname = document.getElementById('courseschoolname').value;
+  console.log(courseschoolname);
 });
 
 let coursesubject = '';
@@ -78,9 +79,31 @@ window.addEventListener("load", async function (){
         }else if(isNaN(Number(coursenumber))){
           alert("Sorry, you have to enter a number for Course Number!");
         }else{
-          postAddNewCourse('/addnewcourse', courseschoolname, coursesubject, coursenumber, courseinstructor, coursedifficulty, coursetime, courseoverall, userid, username, coursecomment);
-          alert("Well Done! You successfully add a new course with a comment!");
-          window.location.href = "./index.html";
+          const res_course1 = await fetch(`/loadcoursebyschoolsubjectnumberinstructor/?schoolname=${courseschoolname}&coursesubject=${coursesubject}&coursenumber=${coursenumber}&instructor=${courseinstructor}`,{
+              method: "GET"
+          });
+          if (!res_course1.ok) {
+              console.log(res_course1.error);
+              return;
+          }
+          const checkcourse = await res_course1.json();
+          if(checkcourse.length > 0){
+            alert("Sorry, you cannot add an existing course with same School Name, same Course Subject, same Course Number with same Instructor! Please search again or add another course!");
+            window.location.reload;
+          }else{
+            postAddNewCourse('/addnewcourse', courseschoolname, coursesubject, coursenumber, courseinstructor, coursedifficulty, coursetime, courseoverall, userid, username, coursecomment);
+            alert("Well Done! You successfully add a new course with a comment!");
+            const res_course2 = await fetch(`/loadcoursebyschoolsubjectnumberinstructor/?schoolname=${courseschoolname}&coursesubject=${coursesubject}&coursenumber=${coursenumber}&instructor=${courseinstructor}`,{
+                method: "GET"
+            });
+            if (!res_course2.ok) {
+                console.log(res_course2.error);
+                return;
+            }
+            const course = await res_course2.json();
+            const courseid = course[0].courseid;
+            window.location.href = "./coursedetail.html?courseid=" + courseid;
+          }
         }
       });
   }catch(error){
