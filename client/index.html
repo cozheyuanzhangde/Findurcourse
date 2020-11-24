@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <script src = "./js/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src = "./js/1c15067c0b.js"></script>
+    <script src = "./js/searchbar.js" defer></script>
+    <script src = "./js/indexpagepopover.js" defer></script>
+    <script src = "./js/fetchsessiondisplay.js" defer></script>
+
+    <title>FindUrCourse!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img src="./images/icon_FUC.png" width="30" height="30" alt="" loading="lazy">
+            <a class = "unselectable logoText">FindUrCourse!</a>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./addcourse.html"><span class="fas fa-plus-square"></span> Add A Course</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./support.html"><span class="fas fa-question-circle"></span> Support</a>
+            </li>
+          </ul>
+        </div>
+        <ul class='nav navbar-nav navbar-right'>
+          <li id="navsignup" class="nav-item">
+              <a class="nav-link" href="./signup.html" id="indexsignup"><span class="fas fa-user-plus"></span> Sign Up</a>
+          </li>
+          <li id="navlogin" class="nav-item">
+              <a class="nav-link" href="./login.html"><span class="fas fa-sign-in-alt"></span> Login</a>
+          </li>
+          <li id="navuserhome" class="nav-item dropdown">
+            <a id="navuseremail" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a id="navuserinfo" class="dropdown-item" href="./userinfo.html"><span class="fas fa-user"></span> User Profile</a>
+              <div class="dropdown-divider"></div>
+              <a id="navlogout" class="dropdown-item" href="#"><span class="fas fa-sign-out-alt"></span> Log out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="custom-container container">
+        <br><br>
+        <h1 class="display-4 unselectable indexPageMainTextWeight">Find Your Desired Course</h1>
+        <h1 class="display-4 unselectable indexPageMainTextWeight">Much EASIER than Before!</h1>
+        <p class="lead unselectable indexPageMainTextWeight">You can rank the courses by level of Difficulty/Time/Overall.</p>
+      </div>
+      <br>
+
+      <br>
+      <div class="custom-container container">
+        <form>
+          <div class="form-row">
+            <div class="col-auto">
+              <input id="schoolName" type="text" class="form-control" placeholder="School Name(UMass)">
+            </div>
+            <div class="col-auto">
+              <input id="courseSubject" type="text" class="form-control" placeholder="Course Subject(CS)">
+            </div>
+            <div class="col-auto">
+              <input id="courseNumber" type="text" class="form-control" placeholder="Course Number(326)">
+            </div>
+            <button type="button" id="searchbtn" class="btn btn-primary mb-2">Search</button>
+          </div>
+        </form>
+        <br>
+        <button type="button" class="btn btn-sm btn-danger" data-toggle="popover" title="Introduction Manual" data-content="Hi, Student! You can use the following tips to have a better user experience: 1. When you search a course, ignore cases; When you add a course, use mixed cases for better formatting like Umass Amherst, CS, 326. 2. Use full School Name including Campus Name like Umass Amherst. 3. Try to use Abbreviation for Course Subject like CS(for Computer Science).">Tips for Searching and Adding a Course</button>
+      </div>
+    </div>
+  </body>
+</html>
