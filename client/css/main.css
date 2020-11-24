@@ -1,0 +1,65 @@
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.jumbotron {
+    background-image: url("../images/jumbotron-1.jpg");
+    background-size: cover;
+    min-height: 100vh
+}
+
+.container.jumbotron {
+    padding-left: 30px;
+}
+
+.container.custom-container {
+    margin-left: 1%;
+}
+
+.centerized {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logoText {
+    font-family:courier;
+    color: beige; 
+    font-weight: bold; 
+    font-size: large;
+}
+
+.indexPageMainTextWeight {
+    font-weight: 400;
+}
+.full{
+    color:rgb(230,179,61)
+}
+
+.center{
+    text-align: center;
+}
+.floatMargin{
+    float: right;
+    margin-left: 10%;
+}
+.searchResult{
+    font-family:courier;
+    color: beige;
+    font-weight: bold;
+    font-size: large;
+}
+.containerDetail {
+    width: 60rem;
+}
+.containerSearch {
+    max-width: 5rem;
+}
+
+.searchbarwidth {
+    width: 150px !important;
+}
