@@ -88,6 +88,9 @@ async function loadCoursesBySchool(schoolname) {
     return await connectAndRun(db => db.any("SELECT * from courses WHERE LOWER(schoolname) = LOWER($1);", [schoolname]));
 }
 
+async function loadCourseBySchoolSubjectNumberInstructor(schoolname, coursesubject, coursenumber, instructor) {
+    return await connectAndRun(db => db.any("SELECT * from courses WHERE LOWER(schoolname) = LOWER($1) AND LOWER(coursesubject) = LOWER($2) AND LOWER(coursenumber) = LOWER($3) AND LOWER(instructor) = LOWER($4);", [schoolname, coursesubject, coursenumber, instructor]));
+}
 
 async function loadCoursecommentsByCourseID(courseid) {
     return await connectAndRun(db => db.any("SELECT * from coursecomments WHERE courseid = $1;", [courseid]));
@@ -178,6 +181,11 @@ app.get("/loadcoursesbyschoolsubject", async (req, res) => {
 app.get("/loadcoursesbyschool", async (req, res) => {
     const coursesloaded = await loadCoursesBySchool(req.query.schoolname);
     res.send(JSON.stringify(coursesloaded));
+});
+
+app.get("/loadcoursebyschoolsubjectnumberinstructor", async (req, res) => {
+    const courseloaded = await loadCourseBySchoolSubjectNumberInstructor(req.query.schoolname, req.query.coursesubject, req.query.coursenumber, req.query.instructor);
+    res.send(JSON.stringify(courseloaded));
 });
 
 app.get("/loadcoursecommentsbycourseid", async (req, res) => {
