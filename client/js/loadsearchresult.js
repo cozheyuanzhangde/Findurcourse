@@ -36,7 +36,7 @@ function createDiv(courseid, courseSubject, courseNumber, courseSchoolName, cour
     const bigDiv = document.createElement('div');
     bigDiv.classList.add('row');
     const node1 = document.createElement('div');
-    node1.innerHTML = courseName;
+    node1.innerHTML = courseName.toUpperCase();
     const a = document.createElement('a');
     a.addEventListener("click", () => coursedetailURLJump(courseid));
     a.setAttribute('style','cursor:pointer');
@@ -44,7 +44,7 @@ function createDiv(courseid, courseSubject, courseNumber, courseSchoolName, cour
     a.classList.add('col-sm');
     const node2 = document.createElement('div');
     node2.classList.add('col-sm');
-    node2.innerHTML = instructor;
+    node2.innerHTML = instructor.toUpperCase();
     const node3 = document.createElement('div');
     node3.classList.add('col-sm');
     starRating(difficulty,node3);
