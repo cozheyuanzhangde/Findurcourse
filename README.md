@@ -1,2 +1,1 @@
-# Findurcourse
-findurcourse.com
+# Findurcourse.com
