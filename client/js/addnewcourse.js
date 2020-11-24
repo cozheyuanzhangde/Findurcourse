@@ -49,6 +49,16 @@ async function postAddNewCourse(url = '', courseschoolname, coursesubject, cours
     body: JSON.stringify({ "schoolname": courseschoolname, "coursesubject": coursesubject, "coursenumber": coursenumber, "instructor": courseinstructor, "difficulty": coursedifficulty, "time": coursetime, "overall": courseoverall, "userid": userid, "username": username, "textcomment": textcomment})
   });
 }
+
+function checkSchoolName(schoolname){
+  const schoolnametmp = schoolname.replace(/\s+/g, '');
+  if((schoolnametmp.toLowerCase() === 'umass')){
+    alert('Please enter full School Name, like Umass Amherst');
+    return false;
+  }
+  return true;
+}
+
 window.addEventListener("load", async function (){
   let thissession;
   let sessionEmail;
@@ -90,7 +100,7 @@ window.addEventListener("load", async function (){
           if(checkcourse.length > 0){
             alert("Sorry, you cannot add an existing course with same School Name, same Course Subject, same Course Number with same Instructor! Please search again or add another course!");
             window.location.reload;
-          }else{
+          }else if(checkSchoolName(courseschoolname)){
             postAddNewCourse('/addnewcourse', courseschoolname, coursesubject, coursenumber, courseinstructor, coursedifficulty, coursetime, courseoverall, userid, username, coursecomment);
             alert("Well Done! You successfully add a new course with a comment!");
             const res_course2 = await fetch(`/loadcoursebyschoolsubjectnumberinstructor/?schoolname=${courseschoolname}&coursesubject=${coursesubject}&coursenumber=${coursenumber}&instructor=${courseinstructor}`,{
