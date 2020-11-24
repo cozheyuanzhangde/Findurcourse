@@ -30,11 +30,11 @@ function createDiv(courseName, instructor, difficulty, time, overall){
     const node1 = document.createElement('div');
     node1.classList.add('col-sm');
     node1.setAttribute('id','cd-courseName');
-    node1.innerHTML = courseName;
+    node1.innerHTML = courseName.toUpperCase();
     const node2 = document.createElement('div');
     node2.classList.add('col-sm');
     node2.setAttribute('id','cd-instructor');
-    node2.innerHTML = instructor;
+    node2.innerHTML = instructor.toUpperCase();
     const node3 = document.createElement('div');
     node3.classList.add('col-sm');
     node3.setAttribute('id','cd-difficulty');
