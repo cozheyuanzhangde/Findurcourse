@@ -56,6 +56,38 @@ function createDiv(courseName, instructor, difficulty, time, overall){
 
 }
 
+function createDiv2(courseName, instructor, difficulty, time, overall){
+    const bigDiv = document.createElement('div');
+    bigDiv.classList.add('row');
+    const node1 = document.createElement('div');
+    node1.classList.add('col-sm');
+    node1.setAttribute('id','cd-courseName');
+    node1.innerHTML = courseName;
+    const node2 = document.createElement('div');
+    node2.classList.add('col-sm');
+    node2.setAttribute('id','cd-instructor');
+    node2.innerHTML = instructor;
+    const node3 = document.createElement('div');
+    node3.classList.add('col-sm');
+    node3.setAttribute('id','cd-difficulty');
+    starRating(difficulty,node3);
+    const node4 = document.createElement('div');
+    node4.classList.add('col-sm');
+    node4.setAttribute('id','cd-timeConsumption');
+    starRating(time,node4);
+    const node5 = document.createElement('div');
+    node5.classList.add('col-sm');
+    node5.setAttribute('id','cd-overall');
+    starRating(overall,node5);
+    bigDiv.appendChild(node1);
+    bigDiv.appendChild(node2);
+    bigDiv.appendChild(node3);
+    bigDiv.appendChild(node4);
+    bigDiv.appendChild(node5);
+    return bigDiv;
+
+}
+
 
 
 //"Create course label display, not create course itself!"
@@ -96,7 +128,7 @@ window.addEventListener("load", async function () {
     const theDiv = document.getElementById('comments');
     
     comments.forEach(function (obj) {
-        theDiv.appendChild(createDiv(obj.username,obj.textcomment, obj.difficulty, obj.time, obj.overall));
+        theDiv.appendChild(createDiv2(obj.username,obj.textcomment, obj.difficulty, obj.time, obj.overall));
     });
 });
 
