@@ -48,3 +48,8 @@
   text-align: center;
   color: red;
 }
+
+.customWarning {
+  text-align: center;
+  color:rgb(253, 148, 49);
+}
