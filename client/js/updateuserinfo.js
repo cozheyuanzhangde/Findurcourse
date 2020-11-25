@@ -8,6 +8,7 @@ const length = document.getElementById("length");
 
 document.getElementById("pwdinput").style.visibility = "hidden";
 document.getElementById("pwdconf").style.visibility = "hidden";
+document.getElementById("pwdchangeinfo").style.visibility = "hidden";
 
 // When the user clicks on the password field, show the message box
 userPwdInput.onfocus = function() {
@@ -102,6 +103,7 @@ window.addEventListener("load", async function (){
     document.getElementById('pwdinputshow').addEventListener('click',()=>{
       document.getElementById("pwdinput").style.visibility = "visible";
       document.getElementById("pwdconf").style.visibility = "visible";
+      document.getElementById("pwdchangeinfo").style.visibility = "visible";
       userPwdInput.onkeyup = function() {
         let check1,check2,check3 = false;
         // Validate letters
