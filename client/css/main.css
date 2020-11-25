@@ -54,7 +54,8 @@
     font-size: large;
 }
 .containerDetail {
-    width: 60rem;
+    width: 90%;
+    margin: auto auto;
 }
 .containerSearch {
     max-width: 5rem;
