@@ -13,8 +13,6 @@
         <br>
         <br>
         <br>
-        <br>
-        <br>
         <div class="container containerWidth">
         
         <div class = "display-3 text-center" >
@@ -48,7 +46,11 @@
                     <input class="form-control rounded-pill text-center" id="usermajor" value="" placeholder="Major">
                     <br>
                 </div>
-                <div class="row-sm-5">
+                <div class="text-center">
+                    <button id="pwdinputshow" class="btn btn-info">Change Password?</button>
+                </div>
+                <br>
+                <div class="row-sm-5" id="pwdinput">
                     <input type="password" class="form-control rounded-pill text-center" id="userpasswordchanged" value="" placeholder="Enter Password if you want to change">
                     <div id="pwdalert" class="customAlert">Password is Too Weak</div>
                     <div id="message">
@@ -59,7 +61,7 @@
                     </div>
                     <br>
                 </div>
-                <div class="row-sm-5">
+                <div class="row-sm-5" id="pwdconf">
                     <input type="password" class="form-control rounded-pill text-center" id="confirm-userpassword" placeholder="Confirm Password"/>
                     <div id="confpwdalert" class="customAlert">Confirm Password and Password not Match</div>
                     <br>
