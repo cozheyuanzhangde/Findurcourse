@@ -98,8 +98,8 @@ window.addEventListener("load", async function (){
           }
           const checkcourse = await res_course1.json();
           if(checkcourse.length > 0){
-            alert("Sorry, you cannot add an existing course with same School Name, same Course Subject, same Course Number with same Instructor! Please search again or add another course!");
-            window.location.reload;
+            alert("Sorry, you cannot add an existing course with same School Name, same Course Subject, same Course Number with same Instructor. Please just comment on it! You will be directed to this course.");
+            window.location.href = "./coursedetail.html?courseid=" + checkcourse[0].courseid;
           }else if(checkSchoolName(courseschoolname)){
             postAddNewCourse('/addnewcourse', courseschoolname, coursesubject, coursenumber, courseinstructor, coursedifficulty, coursetime, courseoverall, userid, username, coursecomment);
             alert("Well Done! You successfully add a new course with a comment!");
