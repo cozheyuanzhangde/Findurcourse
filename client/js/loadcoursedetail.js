@@ -56,27 +56,27 @@ function createDiv(courseName, instructor, difficulty, time, overall){
 
 }
 
-function createDiv2(courseName, instructor, difficulty, time, overall){
+function createDiv2(studentName, comment, difficulty, time, overall){
     const bigDiv = document.createElement('div');
     bigDiv.classList.add('row');
     const node1 = document.createElement('div');
-    node1.classList.add('col-sm');
+    node1.classList.add('col');
     node1.setAttribute('id','cd-courseName');
-    node1.innerHTML = courseName;
+    node1.innerHTML = studentName;
     const node2 = document.createElement('div');
-    node2.classList.add('col-sm');
+    node2.classList.add('col-5');
     node2.setAttribute('id','cd-instructor');
-    node2.innerHTML = instructor;
+    node2.innerHTML = comment;
     const node3 = document.createElement('div');
-    node3.classList.add('col-sm');
+    node3.classList.add('col');
     node3.setAttribute('id','cd-difficulty');
     starRating(difficulty,node3);
     const node4 = document.createElement('div');
-    node4.classList.add('col-sm');
+    node4.classList.add('col');
     node4.setAttribute('id','cd-timeConsumption');
     starRating(time,node4);
     const node5 = document.createElement('div');
-    node5.classList.add('col-sm');
+    node5.classList.add('col');
     node5.setAttribute('id','cd-overall');
     starRating(overall,node5);
     bigDiv.appendChild(node1);
