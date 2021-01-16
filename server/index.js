@@ -124,6 +124,9 @@ async function delateUserByUserID(userid) {
     return await connectAndRun(db => db.none("DELETE FROM users WHERE userid = $1;", [userid]));
 }
 
+async function loadallschoolnames() {
+    return await connectAndRun(db => db.any("SELECT DISTINCT schoolname FROM courses;"));
+}
 
 // EXPRESS SETUP
 const app = express();
