@@ -10,13 +10,13 @@
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <!-- <script src = "./js/loadcoursedetail.js" defer></script> -->
-    <script src = "./js/addnewcourse.js" defer></script>
+    <script src = "./js/addnewcourse-umass-amherst.js" defer></script>
     <script src = "./js/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src = "./js/1c15067c0b.js"></script>
     <script src = "./js/fetchsessiondisplay.js" defer></script>
     <script src = "./js/searchbar.js" defer></script>
-    <title>FindUrCourse! - Add New Course</title>
+    <title>FindUrCourse! - Add New Course - UMass Amherst</title>
   </head>
     <body class="center">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -75,8 +75,9 @@
         <div class="mx-auto containerDetail">
             <br>
             <div class="display-4">
-                <a href="./index.html"><img src="./images/icon_FUC.webp" width="60" height="60" alt="" loading="lazy"></a>
-                Add New Course</div>
+                <a href="https://www.umass.edu/"><img src="./images/umass-amherst.png" width="100" height="100" alt="" loading="lazy"></a>
+                Add New Course - UMass Amherst
+            </div>
             <br>
             <div class="alert alert-warning" role="alert">
               Hi, user, please make sure you searched for this course before adding a new course(you can try to search with or without a Course Subject/Course Number). If you can find your course which already existed, just comment in the coursedetail page. If not, add a new course using this page. Thank you! I am very sorry for any inconvenience. We will make this app better!
@@ -85,14 +86,21 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">School Name</span>
                     </div>
-                    <input type="text" class="form-control" id="courseschoolname">
-                </div><br>   
-                <div class="input-group input-group-lg">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Course Subject (Major/Department)</span>
-                    </div>
-                    <input type="text" class="form-control" id="coursesubject">
+                    <input type="text" class="form-control" id="courseschoolname" value="UMass Amherst" readonly>
                 </div><br>
+                <div class="input-group input-group-lg">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text">Course Subject (Major/Department)</label>
+                  </div>
+                  <select class="custom-select" id="coursesubject">
+                    <option selected value="">Choose...</option>
+                    <option value="CS" href="#">CS</option>
+                    <option value="MATH" href="#">MATH</option>
+                    <option value="PHYSICS" href="#">PHYSICS</option>
+                    <option value="MUSIC" href="#">MUSIC</option>
+                    <option value="ASTRO" href="#">ASTRO</option>
+                  </select>
+                </div><br>  
                 <div class="input-group input-group-lg">
                     <div class="input-group-prepend">
                         <span class="input-group-text">Course Number</span>

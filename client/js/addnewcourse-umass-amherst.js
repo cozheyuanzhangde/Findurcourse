@@ -1,12 +1,8 @@
-let courseschoolname = '';
+let courseschoolname = 'UMass Amherst';
 document.getElementById('courseschoolname').addEventListener('change',()=>{
   courseschoolname = document.getElementById('courseschoolname').value;
-  if(courseschoolname.toUpperCase() === "UMASS AMHERST"){
-    alert("You will be directed to the specialized page for adding a new course in UMass Amherst...");
-    window.location.href="./addcourse-umass-amherst.html";
-  }
+  console.log(courseschoolname);
 });
-
 
 let coursesubject = '';
 document.getElementById('coursesubject').addEventListener('change',()=>{
