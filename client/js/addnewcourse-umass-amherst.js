@@ -1,3 +1,189 @@
+const optionList = document.getElementById('coursesubject').options;
+
+const options = [
+  {
+    text: "Anthropology(ANTHRO)",
+    value: "ANTHRO"
+  },
+  {
+    text: "Chemistry(CHEM)",
+    value: "CHEM"
+  },
+  {
+    text: "Communication(COMM)",
+    value: "COMM"
+  },
+  {
+    text: "Computer Science(CS)",
+    value: "CS"
+  },
+  {
+    text: "Economics(ECON)",
+    value: "ECON"
+  },
+  {
+    text: "English Writing(ENGLWRIT)",
+    value: "ENGLWRIT"
+  },
+  {
+    text: "English as a Second Language(ESL)",
+    value: "ESL"
+  },
+  {
+    text: "Linguistics(LINGUIST)",
+    value: "LINGUIST"
+  },
+  {
+    text: "Mathematics(MATH)",
+    value: "MATH"
+  },
+  {
+    text: "Nutrition(NUTRITN)",
+    value: "NUTRITN"
+  },
+  {
+    text: "Physics(PHYSICS)",
+    value: "PHYSICS"
+  },
+  {
+    text: "Statistics(STATS)",
+    value: "STATS"
+  },
+  {
+    text: "History(HISTORY)",
+    value: "HISTORY"
+  },
+  {
+    text: "Accounting(ACCOUNTG)",
+    value: "ACCOUNTG"
+  },
+  {
+    text: "Resource Economics(RES-ECON)",
+    value: "RES-ECON"
+  },
+  {
+    text: "Operations & Info Management(OIM)",
+    value: "OIM"
+  },
+  {
+    text: "Management(MANAGMNT)",
+    value: "MANAGMNT"
+  },
+  {
+    text: "Finance(FINANCE)",
+    value: "FINANCE"
+  },
+  {
+    text: "Chinese(CHINESE)",
+    value: "CHINESE"
+  },
+  {
+    text: "Public Health(PUBHLTH)",
+    value: "PUBHLTH"
+  },
+  {
+    text: "Art(ART)",
+    value: "ART"
+  },
+  {
+    text: "Isenberg School of Management(SCH-MGMT)",
+    value: "SCH-MGMT"
+  },
+  {
+    text: "College of Inform & Comp Sci(CICS)",
+    value: "CICS"
+  },
+  {
+    text: "Japanese(JAPANESE)",
+    value: "JAPANESE"
+  },
+  {
+    text: "Astronomy(ASTRON)",
+    value: "ASTRON"
+  },
+  {
+    text: "Biology(BIOLOGY)",
+    value: "BIOLOGY"
+  },
+  {
+    text: "Biochemistry & Molecular Bio(BIOCHEM)",
+    value: "BIOCHEM"
+  },
+  {
+    text: "Afro-American Studies(AFROAM)",
+    value: "AFROAM"
+  },
+  {
+    text: "Art History(ART-HIST)",
+    value: "ART-HIST"
+  },
+  {
+    text: "English(ENGLISH)",
+    value: "ENGLISH"
+  },
+  {
+    text: "German(GERMAN)",
+    value: "GERMAN"
+  },
+  {
+    text: "Korean(KOREAN)",
+    value: "KOREAN"
+  },
+  {
+    text: "Education(EDUC)",
+    value: "EDUC"
+  },
+  {
+    text: "Informatics(INFO)",
+    value: "INFO"
+  },
+  {
+    text: "Political Science(POLISCI)",
+    value: "POLISCI"
+  },
+  {
+    text: "Geography(GEOGRAPH)",
+    value: "GEOGRAPH"
+  },
+  {
+    text: "Geology(GEOLOGY)",
+    value: "GEOLOGY"
+  },
+  {
+    text: "Kinesiology(KIN)",
+    value: "KIN"
+  },
+  {
+    text: "Journalism(JOURNAL)",
+    value: "JOURNAL"
+  },
+  {
+    text: "Marketing(MARKETNG)",
+    value: "MARKETNG"
+  },
+  {
+    text: "Philosophy(PHIL)",
+    value: "PHIL"
+  },
+  {
+    text: "Nursing(NURSING)",
+    value: "NURSING"
+  }
+];
+
+options.sort((a, b) => (a.value > b.value) ? 1 : -1);
+
+options.forEach(option =>
+  optionList.add(
+    new Option(option.text, option.value)
+  )
+);
+
+optionList.add(
+  new Option("If your Course Subject is not listed here, please contact admin by email: support@findurcourse.com", "")
+);
+
+
 let courseschoolname = 'UMass Amherst';
 document.getElementById('courseschoolname').addEventListener('change',()=>{
   courseschoolname = document.getElementById('courseschoolname').value;
