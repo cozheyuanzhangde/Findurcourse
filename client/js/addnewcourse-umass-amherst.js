@@ -328,8 +328,8 @@ window.addEventListener("load", async function (){
       document.getElementById('submit').addEventListener('click', async () => {
         if(!((courseschoolname.length>0)&&(coursesubject.length>0)&&(coursenumber.length>0)&&(courseinstructor.length>0)&&(coursedifficulty.length>0)&&(courseoverall.length>0)&&(coursecomment.length>0))){
           alert("Sorry, you need to enter all fields to add a new course!");
-        }else if(isNaN(Number(coursenumber))){
-          alert("Sorry, you have to enter a number for Course Number!");
+        //}else if(isNaN(Number(coursenumber))){
+          //alert("Sorry, you have to enter a number for Course Number!");
         }else{
           const res_course1 = await fetch(`/loadcoursebyschoolsubjectnumberinstructor/?schoolname=${courseschoolname}&coursesubject=${coursesubject}&coursenumber=${coursenumber}&instructor=${courseinstructor}`,{
               method: "GET"
