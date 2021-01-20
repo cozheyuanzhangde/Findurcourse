@@ -168,6 +168,62 @@ const options = [
   {
     text: "Nursing(NURSING)",
     value: "NURSING"
+  },
+  {
+    text: "Animal Science(ANIMLSCI)",
+    value: "ANIMLSCI"
+  },
+  {
+    text: "Architecture(ARCH)",
+    value: "ARCH"
+  },
+  {
+    text: "Biomedical Engineering(BMED-ENG)",
+    value: "BMED-ENG"
+  },
+  {
+    text: "Biostatistics(BIOSTATS)",
+    value: "BIOSTATS"
+  },
+  {
+    text: "Psychology & Brain Sciences(PSYCH)",
+    value: "PSYCH"
+  },
+  {
+    text: "Microbiology(MICROBIO)",
+    value: "MICROBIO"
+  },
+  {
+    text: "Comparative Literature(COMP-LIT)",
+    value: "COMP-LIT"
+  },
+  {
+    text: "Engineering(ENGIN)",
+    value: "ENGIN"
+  },
+  {
+    text: "Dance(DANCE)",
+    value: "DANCE"
+  },
+  {
+    text: "Chemical Engineering(CHEM-ENG)",
+    value: "CHEM-ENG"
+  },
+  {
+    text: "Informatics(INFO)",
+    value: "INFO"
+  },
+  {
+    text: "Sport Management(SPORTMGT)",
+    value: "SPORTMGT"
+  },
+  {
+    text: "Food Science(FOOD-SCI)",
+    value: "FOOD-SCI"
+  },
+  {
+    text: "Stockbridge Sch of Agriculture(STOCKSCH)",
+    value: "STOCKSCH"
   }
 ];
 
