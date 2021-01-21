@@ -278,5 +278,9 @@
     {
       "text": "Portuguese(PORTUG)",
       "value": "PORTUG"
+    },
+    {
+      "text": "Music(MUSIC)",
+      "value": "MUSIC"
     }
 ]
