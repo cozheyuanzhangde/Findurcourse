@@ -299,5 +299,7 @@ document.getElementById('schoolName').addEventListener('change',()=>{
         newOptionElement.value = option.value;
         optionList.appendChild(newOptionElement);
     });
+  }else{
+    optionList.innerHTML = '';
   }
 });
