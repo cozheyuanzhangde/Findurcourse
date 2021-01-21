@@ -78,6 +78,8 @@ window.addEventListener("load", async function () {
 
     if(courses === undefined){
         courses = [];
+    }else{
+        document.getElementById("signloadingcourses").remove();
     }
 
     const theDiv = document.getElementById('searchDetail');

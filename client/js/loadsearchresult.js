@@ -67,6 +67,7 @@ let res_courses;
 let courses;
 
 window.addEventListener("load", async function () {
+    document.getElementById("noloadinfo").style.visibility = "hidden";
     if(schoolName === ""){
         alert("Sorry, You need to at least enter a School Name for searching courses!");
         window.history.back();
@@ -94,6 +95,13 @@ window.addEventListener("load", async function () {
 
     if(courses === undefined){
         courses = [];
+    }else{
+        if(courses.length !== 0){
+            document.getElementById("noloadinfo").remove();
+        }else{
+            document.getElementById("noloadinfo").style.visibility = "visible";
+        }
+        document.getElementById("signloadingcourses").remove();
     }
 
     const theDiv = document.getElementById('searchDetail');

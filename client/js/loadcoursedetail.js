@@ -124,6 +124,8 @@ window.addEventListener("load", async function () {
 
     if(comments === undefined){
         comments = [];
+    }else{
+        document.getElementById("signloadingcomments").remove();
     }
     const theDiv = document.getElementById('comments');
     
