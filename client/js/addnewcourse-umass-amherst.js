@@ -224,6 +224,66 @@ const options = [
   {
     text: "Stockbridge Sch of Agriculture(STOCKSCH)",
     value: "STOCKSCH"
+  },
+  {
+    text: "Civil & Environmental Engrg(CE-ENGIN)",
+    value: "CE-ENGIN"
+  },
+  {
+    text: "Classics(CLASSICS)",
+    value: "CLASSICS"
+  },
+  {
+    text: "Communication Disorders(COMM-DIS)",
+    value: "COMM-DIS"
+  },
+  {
+    text: "Electrical & Computer Engin(EC-ENG)",
+    value: "EC-ENG"
+  },
+  {
+    text: "Arabic(ARABIC)",
+    value: "ARABIC"
+  },
+  {
+    text: "Spanish(SPANISH)",
+    value: "SPANISH"
+  },
+  {
+    text: "Latin(LATIN)",
+    value: "LATIN"
+  },
+  {
+    text: "French Studies(FRENCHST)",
+    value: "FRENCHST"
+  },
+  {
+    text: "Judaic Studies(JUDAIC)",
+    value: "JUDAIC"
+  },
+  {
+    text: "Theater(THEATER)",
+    value: "THEATER"
+  },
+  {
+    text: "Social Thought & Polic. Econ(STPEC)",
+    value: "STPEC"
+  },
+  {
+    text: "Sustainable Community(SUSTCOMM)",
+    value: "SUSTCOMM"
+  },
+  {
+    text: "Legal Studies(LEGAL)",
+    value: "LEGAL"
+  },
+  {
+    text: "Sociology(SOCIOL)",
+    value: "SOCIOL"
+  },
+  {
+    text: "Portuguese(PORTUG)",
+    value: "PORTUG"
   }
 ];
 

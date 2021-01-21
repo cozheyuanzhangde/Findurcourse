@@ -14,6 +14,7 @@
     <script src = "./js/searchbar.js" defer></script>
     <script src = "./js/indexpagepopover.js" defer></script>
     <script src = "./js/fetchsessiondisplay.js" defer></script>
+    <script src = "./js/indexpage.js" defer></script>
     <meta name="description" content="FindUrCourse is a website designed for searching, sorting and reviewing college courses. Students can find their desired course much easier than before.">
 
     <title>FindUrCourse! - Search, Sort and Review College Courses</title>
@@ -69,10 +70,15 @@
         <form>
           <div class="form-row">
             <div class="col-auto">
-              <input id="schoolName" type="text" class="form-control" placeholder="School Name(Umass Amherst)">
+              <input id="schoolName" type="text" autocomplete="off" list="schoolsdatalist" class="form-control" placeholder="School Name(Umass Amherst)">
+              <datalist id="schoolsdatalist">
+                <option value="UMass Amherst">
+              </datalist>
             </div>
             <div class="col-auto">
-              <input id="courseSubject" type="text" class="form-control" placeholder="Course Subject(CS)">
+              <input class="form-control" type="text" autocomplete="off" list="subjectsdatalist" id="courseSubject" placeholder="Course Subject(CS)">
+              <datalist id="subjectsdatalist">
+              </datalist>
             </div>
             <div class="col-auto">
               <input id="courseNumber" type="text" class="form-control" placeholder="Course Number(326)">
