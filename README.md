@@ -1,1 +1,1 @@
-A course information website for college students. Search, rank, and rate courses.
+A course information website for college students to search, rank, and rate courses.
